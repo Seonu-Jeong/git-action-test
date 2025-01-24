@@ -39,9 +39,15 @@ jobs:
         with:
           host port: 3306
           container port: 3306
-          mysql database: 'its'
+          mysql database: 'ci'
           mysql user: 'root'
           mysql root password: '1234'
+
+      - name: Start Redis
+        uses: supercharge/redis-github-action@1.1.0
+        with:
+          redis-version: 6
+
 
       - name: make executable gradlew
         run: chmod +x ./gradlew
