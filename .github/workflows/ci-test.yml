@@ -31,6 +31,15 @@ jobs:
           distribution: 'adopt' # See 'Supported distributions' for available options
           java-version: '17'
 
+      - name: Set up MySQL
+        uses: mirromutth/mysql-action@v1.1
+        with:
+          host port: 3306
+          container port: 3306
+          character set server: 'utf8'
+          mysql database: 'test'
+          mysql root password: '1234'
+
       - name: make executable gradlew
         run: chmod +x ./gradlew
 
