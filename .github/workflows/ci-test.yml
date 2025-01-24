@@ -39,7 +39,7 @@ jobs:
           character set server: 'utf8'
           mysql database: 'its'
           mysql user: 'root'
-          mysql passowrd: '1234'
+          mysql password: '1234'
 
       - name: make executable gradlew
         run: chmod +x ./gradlew
